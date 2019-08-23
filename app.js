@@ -5,7 +5,7 @@ const getUserChoice = userInput => {
     if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
       return userInput
     } else {
-      console.log('Error, invalid input')
+      alert('Error, invalid input');
     }
   }
   //console.log(getUserChoice('scissors'));
@@ -55,7 +55,7 @@ const getUserChoice = userInput => {
   }
   //console.log(determineWinner('paper', 'rock'));
   
-  const playGame = () => {//arrow function
+  const playGame = () => {
     const userChoice = getUserChoice('rock');//takes userChoice input
     const computerChoice = getComputerChoice();//assigns random computerChoice input
     console.log('You threw: ' + userChoice);
