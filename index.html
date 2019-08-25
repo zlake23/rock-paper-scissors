@@ -6,18 +6,38 @@
     </head>
 
     <body>
-        <img src="Images/Paper-hand.png">
-        <img src="Images/Rock-hand.png">
-        <img src="Images/Scissor-hand.png">
+        
+        <h1>Rock, Paper, Scissors!</h1>
         <div id="game-container">
+            
             <div class="row">
+                <button id="new-game-btn">New Game</button>
+            </div> 
 
-
+            <div class="row" id="round-counter">
+                <div id="round">Round: 1</div>
             </div>
+
+            <div class="row" id="scoreboard">
+                <div class="score computer-score">Computer Score: 0</div>
+                <div class="score player-score">Player Score: 0</div>
+                
+            </div>
+
             <div class="row">
-
-
+                <div class="game-pieces">  
+                    <button class="game-btn" id="rock-btn"><img src="Images/Rock-hand.png"></button>
+                    <button class="game-btn" id="paper-btn"><img src="Images/Paper-hand.png"></button>
+                    <button class="game-btn" id="scissor-btn"><img src="Images/Scissor-hand.png"></button>
+                </div>
             </div>
+            <div class="row" id="gameplay">
+                <div id="computer-choice">Computer chose: </div>
+                <div id="player-choice">Player chose: </div>
+                <div id="winner">Winner: </div>                 
+            </div>
+
+    
 
         </div>
 
