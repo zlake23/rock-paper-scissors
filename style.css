@@ -1,5 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300&display=swap');
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    background-color: rgb(133, 98, 47);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
 img {
     height: 60px;
     width: 80px;
 
+}
+
+#game-container {
+    height: 400px;
+    max-width: 600px;
+    border: 3px solid rgb(52, 74, 82);
+    background-color: rgb(187, 177, 177);
+    border-radius: 7px;
+    margin-left: calc(50% - 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#new-game-btn {
+    background-color: forestgreen;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 4px black;
+    cursor: pointer;
+    font-size: 15px;
+}
+#new-game-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.game-btn {
+    border: 2px solid grey;
+    border-radius: 4px;
+    background-color: lightslategrey;
+    cursor: pointer;
+}
+
+.game-btn:hover {
+    background-color: gray;
+}
+
+
+#scoreboard {
+    display: flex;
+    flex-direction: row;
+}
+.score {
+    margin-right: 20px;
+}
+
+.row {
+    padding: 5px; 
 }
