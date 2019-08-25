@@ -3,9 +3,14 @@
 body {
     font-family: 'Oswald', sans-serif;
     font-size: 25px;
-    background-color: rgb(133, 98, 47);
+    color: white;
+    background-color: rgb(53, 33, 3);
 }
-
+header {
+    background-color: black;
+    height: 60px;
+    width: 100%;
+}
 h1 {
     text-align: center;
     font-size: 40px;
@@ -13,8 +18,8 @@ h1 {
 }
 
 img {
-    height: 60px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
 
 }
 
@@ -25,14 +30,11 @@ img {
     background-color: rgb(187, 177, 177);
     border-radius: 7px;
     margin-left: calc(50% - 300px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
 }
 
 #new-game-btn {
-    background-color: forestgreen;
+    background-color: rgb(179, 121, 14);
     color: white;
     height: 40px;
     width: 150px;
@@ -47,25 +49,17 @@ img {
 }
 
 .game-btn {
-    border: 2px solid grey;
-    border-radius: 4px;
-    background-color: lightslategrey;
+    background-color: transparent;
     cursor: pointer;
+    border: none;
+    border-radius: 50%;
+
 }
 
 .game-btn:hover {
-    background-color: gray;
+    box-shadow: 3px 3px 3px black;
 }
 
-
-#scoreboard {
-    display: flex;
-    flex-direction: row;
-}
 .score {
     margin-right: 20px;
-}
-
-.row {
-    padding: 5px; 
 }

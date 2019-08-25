@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Rock Paper Scissors, Go!</title>
+        <title>Rock Paper Scissors, Shoot!</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-
+   
     <body>
-        
-        <h1>Rock, Paper, Scissors!</h1>
-        <div id="game-container">
+        <header>
+            <h1>Rock, Paper, Scissors!</h1>
+        </header>
+
+        <div class="scoreboard">
+            <div id="player-icon" class="icon">Player</div>
+            <div id="computer-icon" class="icon">Computer</div>
+            <span id="player-score">0</span>:<span id="computer-score">0</span>
+                
+        </div>
+
+        <div class="row">
+            <div class="game-pieces">  
+                <button class="game-btn" id="rock"><img src="Images/rock.png"></button>
+                <button class="game-btn" id="paper"><img src="Images/paper.png"></button>
+                <button class="game-btn" id="scissors"><img src="Images/scissors.png"></button>
+            </div>
+        </div>
             
+        <div class="row" id="gameplay">
+            <div id="computer-choice">Computer chose: </div>
+            <div id="player-choice">Player chose: </div>
+            <div id="winner">Winner: </div>  
+                
             <div class="row">
                 <button id="new-game-btn">New Game</button>
             </div> 
-
-            <div class="row" id="round-counter">
-                <div id="round">Round: 1</div>
-            </div>
-
-            <div class="row" id="scoreboard">
-                <div class="score computer-score">Computer Score: 0</div>
-                <div class="score player-score">Player Score: 0</div>
-                
-            </div>
-
-            <div class="row">
-                <div class="game-pieces">  
-                    <button class="game-btn" id="rock-btn"><img src="Images/Rock-hand.png"></button>
-                    <button class="game-btn" id="paper-btn"><img src="Images/Paper-hand.png"></button>
-                    <button class="game-btn" id="scissor-btn"><img src="Images/Scissor-hand.png"></button>
-                </div>
-            </div>
-            <div class="row" id="gameplay">
-                <div id="computer-choice">Computer chose: </div>
-                <div id="player-choice">Player chose: </div>
-                <div id="winner">Winner: </div>                 
-            </div>
-
-    
-
         </div>
 
     </body>
