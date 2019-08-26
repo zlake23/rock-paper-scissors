@@ -11,13 +11,14 @@ const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
-
+//random computer choice
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
     const randomNumber = (Math.floor(Math.random() * 3));
     return choices[randomNumber];
 }
 
+//win, lose, draw functions
 function win(playerChoice, computerChoice) {
     playerScore++;
     playerScore_span.innerHTML = playerScore;
@@ -26,19 +27,23 @@ function win(playerChoice, computerChoice) {
     computerChoice_span.innerHTML = "Computer Chose: " + computerChoice;
 }
 
-function lose() {
+function lose(playerChoice, computerChoice) {
     computerScore++;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
-   
+    playerChoice_span.innerHTML = "Player Chose: " + playerChoice;
+    computerChoice_span.innerHTML = "Computer Chose: " + computerChoice;
 }
 
-function draw() {
+function draw(playerChoice, computerChoice) {
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
-   
+    playerChoice_span.innerHTML = "Player Chose: " + playerChoice;
+    computerChoice_span.innerHTML = "Computer Chose: " + computerChoice;
 }
 
+
+//gameplay function
 function playGame(playerChoice) {
     const computerChoice = getComputerChoice();
     switch (playerChoice + computerChoice) {
@@ -50,16 +55,17 @@ function playGame(playerChoice) {
         case "rockpaper":
         case "paperscissors":
         case "scissorsrock":
-            lose();
+            lose(playerChoice, computerChoice);
             break;
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-            draw();
+            draw(playerChoice, computerChoice);
             break;
     }
 }
 
+//button click functions
 function main() {
 rock_div.addEventListener('click', function() {
     playGame("rock");
