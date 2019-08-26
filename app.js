@@ -1,11 +1,12 @@
 /*ROCK SCISSOR PAPER GAME!*/
 //declares variables
-let userScore = 0;
+let playerScore = 0;
 let computerScore = 0;
-const userScore_span = document.getElementById('user-score');
+const playerScore_span = document.getElementById('player-score');
 const computerScore_span = document.getElementById('computer-score');
 const scoreBoard_div = document.querySelector(".scoreboard");
-const result_div = document.querySelector(".result");
+const playerChoice_span = document.querySelector("#player-choice");
+const computerChoice_span = document.querySelector("#computer-choice");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
@@ -17,13 +18,34 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
-function playGame(userChoice) {
+function win(playerChoice, computerChoice) {
+    playerScore++;
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+    playerChoice_span.innerHTML = "Player Chose: " + playerChoice;
+    computerChoice_span.innerHTML = "Computer Chose: " + computerChoice;
+}
+
+function lose() {
+    computerScore++;
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+   
+}
+
+function draw() {
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+   
+}
+
+function playGame(playerChoice) {
     const computerChoice = getComputerChoice();
-    switch (userChoice + computerChoice) {
+    switch (playerChoice + computerChoice) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
-            win();
+            win(playerChoice, computerChoice);
             break;
         case "rockpaper":
         case "paperscissors":
