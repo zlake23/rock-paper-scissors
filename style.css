@@ -107,3 +107,16 @@ img {
     flex-direction: column;
     align-items: center;
 }
+
+.green-box {
+    background-color: #4dcc7d;
+    
+}
+
+.red-box {
+    background-color: #fc121b;
+}
+
+.gray-box {
+    background-color: #464647;
+}
