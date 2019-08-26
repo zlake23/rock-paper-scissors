@@ -10,6 +10,7 @@ const computerChoice_span = document.querySelector("#computer-choice");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
+const newGame_div = document.querySelector("#new-game-btn");
 
 //random computer choice
 function getComputerChoice() {
@@ -65,6 +66,15 @@ function playGame(playerChoice) {
     }
 }
 
+function clearGame() {
+    playerChoice_span.innerHTML = "Player Chose: ";
+    computerChoice_span.innerHTML = "Computer Chose: ";
+    playerScore = 0;
+    playerScore_span.innerHTML = playerScore;
+    computerScore = 0;
+    computerScore_span.innerHTML = computerScore;
+}
+
 //button click functions
 function main() {
 rock_div.addEventListener('click', function() {
@@ -76,6 +86,10 @@ paper_div.addEventListener('click', function() {
 scissors_div.addEventListener('click', function() {
     playGame("scissors");
 });
+newGame_div.addEventListener('click', function () {
+    clearGame();
+})
+
 }
 
 main();
