@@ -1,67 +1,21 @@
 /*ROCK SCISSOR PAPER GAME!*/
-//checks for proper input by user
-const getUserChoice = userInput => {
-    userInput = userInput.toLowerCase();
-    if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-      return userInput
-    } else {
-      alert('Error, invalid input');
-    }
-  }
-  //console.log(getUserChoice('scissors'));
-  //assigns random number 0 - 2 for computer to throw rock, paper or scissors
-  function getComputerChoice() {
-    let randomNumber = Math.floor(Math.random() * 3)
-    switch (randomNumber) {
-      case 0:
-        return 'rock';
-      case 1:
-        return 'paper';
-      case 2:
-        return 'scissors'
-    }
-  }
-  
-  //console.log(getComputerChoice());
-  
-  function determineWinner(userChoice, computerChoice) {
-    if(userChoice === computerChoice) {
-      return 'Tie Game!'
-    }
-    //determines winner if player used rock
-    if(userChoice === 'rock') {
-      if(computerChoice === 'paper') {
-        return 'The computer won!'
-      } else {
-        return 'You won!'
-      }
-    }
-    //determines winner if player used paper
-    if(userChoice === 'paper') {
-      if(computerChoice === 'scissors') {
-        return 'The computer won!'
-      } else {
-        return 'You won!'
-      }
-    }
-    //determines winner if player used scissors
-    if(userChoice === 'scissors') {
-      if(computerChoice === 'rock') {
-        return 'The computer won!'
-      } else {
-        return 'You won!'
-      }
-    }
-  }
-  //console.log(determineWinner('paper', 'rock'));
-  
-  const playGame = () => {
-    const userChoice = getUserChoice('rock');//takes userChoice input
-    const computerChoice = getComputerChoice();//assigns random computerChoice input
-    console.log('You threw: ' + userChoice);
-    console.log('Computer threw: ' + computerChoice);
+//declares variables
+let userScore = 0;
+let computerScore = 0;
+const userScore_span = document.getElementById('user-score');
+const computerScore_span = document.getElementById('computer-score');
+const scoreBoard_div = document.querySelector(".scoreboard");
+const result_div = document.querySelector(".result");
+const rock_div = document.getElementById("rock");
+const paper_div = document.getElementById("paper");
+const scissors_div = document.getElementById("scissors");
+
+rock_div.addEventListener('click', function() {
     
-   console.log(determineWinner(userChoice, computerChoice));//logs userChoice, computerChoice and called determineWinner function
-  }
-  
-  playGame();//calls playGame function
+});
+paper_div.addEventListener('click', function() {
+    
+});
+scissors_div.addEventListener('click', function() {
+    
+});
