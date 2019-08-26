@@ -20,6 +20,13 @@ h1 {
     color: whitesmoke;
 }
 
+
+p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 img {
     height: 100px;
     width: 100px;
