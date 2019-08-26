@@ -76,6 +76,7 @@ function playGame(playerChoice) {
     }
 }
 
+//new game button function
 function clearGame() {
     playerChoice_span.innerHTML = "Player Chose: ";
     computerChoice_span.innerHTML = "Computer Chose: ";
